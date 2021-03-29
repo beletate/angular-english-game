@@ -1,1 +1,41 @@
-<h1>app works</h1>
+<div class="container">
+    <form #menuForm="ngForm">
+        <div *ngIf="(!choose)" class="choose-box rounded py-4">
+            <h1 class="my-4">Bem vindo! </h1>
+            <h4 class="my-4">Escolha a dificuldade:</h4>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button href="#" class="btn form-control btn-light" (click)="escolherDificuldade('Fácil')">Fácil</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button href="#" class="btn form-control btn-light" (click)="escolherDificuldade('Médio')">Médio</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button href="#" class="btn form-control btn-light" (click)="escolherDificuldade('Difícil')">Difícil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="(choose)" class="choose-box rounded py-4">
+
+            <div *ngIf="optionGame == 'Fácil'" class="px-4">
+                <app-facil></app-facil>
+            </div>
+            <div *ngIf="optionGame == 'Médio'" class="px-4">
+                <app-medio></app-medio>
+            </div>
+            <div *ngIf="optionGame == 'Difícil'" class="px-4">
+                <app-dificil></app-dificil>
+            </div>
+        </div>
+    </form>
+</div>

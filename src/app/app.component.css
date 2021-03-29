@@ -1,0 +1,54 @@
+
+.container {
+    max-width: 2560px;
+    min-height: 1080px;
+    margin:0;
+    padding:0;
+    position:absolute;
+    background: url("../assets/imgs/quiz.jpg");    
+    background-repeat: no-repeat;
+    background-size: 2560px 1080px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+    
+.choose-box {
+    width:380px;
+    height:460px;
+    background-color:darkorchid;
+    color:white;
+    }
+    
+.choose-box h1,h4 {
+    text-align:center;
+    align-items:center;
+}
+
+.group-btn{
+    margin-top: 15%;
+    
+    vertical-align: middle;
+}
+
+@media (max-width: 640px)
+{
+  .choose-box
+   {
+       width: 320px;
+   }
+   .container{
+       margin-top: -70%;
+   }
+}
+@media (max-width: 560px)
+{
+  .choose-box
+   {
+       width: 260px;
+   }
+   .container{
+       margin-top: -70%;
+   }
+}
