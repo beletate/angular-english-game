@@ -16,5 +16,9 @@ export class AppComponent {
     this.choose = true
     this.optionGame = opt
   }
+
+  changeGame(){
+    this.choose = false
+  }
   
 }

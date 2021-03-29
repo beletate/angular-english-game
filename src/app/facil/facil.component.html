@@ -1,1 +1,110 @@
-<p>facil works!</p>
+<div class="container">
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3">
+        <div [hidden]="count == 6" class="p-2 bd-highlight">{{count}}/5</div>
+    </div>
+    <form #facilMenu="ngForm">
+        <div *ngIf="count == 1" class="question-one">
+            <h4 class="my-4">Qual o passado de "Go"?</h4>
+            <br><br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Goed')">Goed</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Went')">Went</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 2" class="question-two">
+            <h4 class="my-4">Complete a frase: "He ____ a cat".</h4>
+            <br><br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Have')">Have</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Has')">Has</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 3" class="question-three">
+            <h4 class="my-4">Qual o passado de "Are"?</h4>
+            <br><br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Was')">Was</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Were')">Were</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 4" class="question-four">
+            <h4 class="my-4">Complete a frase: "I ____ 15 years old".</h4>
+            <br><br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Am')">Am</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Have')">Have</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 5" class="question-five">
+            <h4 class="my-4">Complete a frase: "She _____ like guava".</h4>
+            <br><br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Doesnot')">Does not</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('donot')">Do not</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 6">
+            <h4 class="my-4">Parabéns você acertou: {{acertos}} questões!</h4>
+            <br><br>
+
+            <p>{{mensagem}}</p>
+        </div>
+
+
+    </form>
+</div>

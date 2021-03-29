@@ -26,9 +26,10 @@
         </div>
 
         <div *ngIf="(choose)" class="choose-box rounded py-4">
+                <button class="btn btn-light mx-4" (click)="changeGame()">Menu</button>
 
             <div *ngIf="optionGame == 'Fácil'" class="px-4">
-                <app-facil></app-facil>
+                <app-facil ></app-facil>
             </div>
             <div *ngIf="optionGame == 'Médio'" class="px-4">
                 <app-medio></app-medio>
