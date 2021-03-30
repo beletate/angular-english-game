@@ -1,1 +1,139 @@
-<p>medio works!</p>
+<div class="container">
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3">
+        <div [hidden]="count == 6" class="p-2 bd-highlight">{{count}}/5</div>
+    </div>
+    <form #medioMenu="ngForm">
+        <div *ngIf="count == 1" class="question-one">
+            <h4 class="">Anna: Whats's your job?</h4>
+            <h4 class="">Christina: I'm _____ secretary.</h4>
+            <br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('an')">an</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('a')">a</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('one')">one</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 2" class="question-two">
+            <h4 class="my-4">"I have a brother. ______ name is John."</h4>
+            <br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Her')">Her</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('Him')">Him</button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('His')">His</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 3" class="question-three">
+            <h4 class="my-4">"This is my _______ car."</h4>
+            <br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('wife')">wife</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('wifesWrong')">wifes'</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('wifesRight')">wife's</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 4" class="question-four">
+            <h4 class="my-4">"Her house is ______ than my house."</h4>
+            <br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('morebig')">more big</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('bigger')">bigger</button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('morebigger')">more bigger</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 5" class="question-five">
+            <h4 class="my-4">"Last night I ______ to the cinema."</h4>
+            <br>
+
+            <div class="px-4 group-btn">
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('went')">went</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('gone')">gone</button>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('was')">was</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 6">
+            <h4 class="my-4">Parabéns você acertou: {{acertos}} questões!</h4>
+            <br>
+
+            <p>{{mensagem}}</p>
+        </div>
+
+
+    </form>
+</div>
