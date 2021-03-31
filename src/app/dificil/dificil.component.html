@@ -1,1 +1,162 @@
-<p>dificil works!</p>
+<div class="container">
+    <div class="d-flex align-items-end flex-column bd-highlight mb-3">
+        <div [hidden]="count == 6" class="p-2 bd-highlight">{{count}}/5</div>
+    </div>
+    <form #dificilMenu="ngForm">
+        <div *ngIf="count == 1" class="question-one">
+            <h4>Qual o tempo verbal da frase: "It had been raining for several hours."</h4>
+            <br><br>
+
+            <div class="px-2 group-btn">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('a')">Past Perfect Continuos</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Present Perfect Continuos</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Past Perfect</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Future Perfect Continuos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 2" class="question-two">
+            <h4 class="my-2">Escolha a frase na voz passiva:</h4>
+            <br><br>
+
+            <div class="px-2 group-btn">
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">I wrote the book.</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">I had written the book.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">The book was written by me.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('d')">The book had written by me.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 3" class="question-three">
+            <h4 class="my-2">Qual frase contém indirect speech?</h4>
+            <br><br>
+
+            <div class="px-2 group-btn">
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">She was at work.</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('b')">She told me that she was at work.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">She told me she likes working.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">She told me that she is at work.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 4" class="question-four">
+            <h4 class="my-2">Assinale a alternativa que apresenta estrutura correta:</h4>
+            <br><br>
+
+            <div class="px-2 group-btn">
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">I were participating of the parade.</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">I thinked I had a heart attack.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('c')">I enjoy playing volleyball.</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">I got up at 7 o'clock tomorrow.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 5" class="question-five">
+            <h4 class="my-2">Complete a fras: "There isn't ___ in the box."</h4>
+            <br><br>
+
+            <div class="px-2 group-btn">
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Nothing</button>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('b')">Anything</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Something</button>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col">
+                        <button class="btn form-control btn-light" (click)="escolherOpcao('')">Any</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="count == 6">
+            <h4 class="my-2">Parabéns você acertou: {{acertos}} questões!</h4>
+            <br><br>
+
+            <p>{{mensagem}}</p>
+        </div>
+
+
+    </form>
+</div>
